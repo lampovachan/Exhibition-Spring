@@ -1,0 +1,8 @@
+.idea
+*.iml
+out
+gen
+log
+target
+*.mv.db
+data
