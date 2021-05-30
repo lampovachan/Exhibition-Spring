@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/lampovachan/Exhibition-Spring.svg?branch=master)](https://travis-ci.com/lampovachan/Exhibition-Spring)
+
+
 Design and implement a REST API using Hibernate and Spring-Boot without frontend.
 
 The task is:

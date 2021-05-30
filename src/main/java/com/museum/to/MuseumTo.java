@@ -1,6 +1,5 @@
 package com.museum.to;
 
-import com.museum.model.Exhibition;
 import com.museum.model.Museum;
 import lombok.Data;
 import lombok.NoArgsConstructor;

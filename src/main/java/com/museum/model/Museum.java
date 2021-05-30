@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @Data
