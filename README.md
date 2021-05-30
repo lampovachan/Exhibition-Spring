@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/lampovachan/Exhibition-Spring.svg?branch=master)](https://travis-ci.com/lampovachan/Exhibition-Spring)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/25819972efac4941a1eeb6a4609176ac)](https://www.codacy.com/gh/lampovachan/Exhibition-Spring/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lampovachan/Exhibition-Spring&amp;utm_campaign=Badge_Grade)
 
 
 Design and implement a REST API using Hibernate and Spring-Boot without frontend.
