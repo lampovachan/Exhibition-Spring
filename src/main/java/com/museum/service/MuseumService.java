@@ -2,7 +2,6 @@ package com.museum.service;
 
 import com.museum.model.Museum;
 import com.museum.repository.ExhibitionRepository;
-import com.museum.repository.MuseumRepository;
 import com.museum.to.ExhibitionTo;
 import com.museum.to.MuseumTo;
 import org.slf4j.Logger;

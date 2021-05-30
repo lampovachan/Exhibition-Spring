@@ -1,8 +1,6 @@
 package com.museum.exceptions;
 
-import com.museum.exceptions.DataNotFoundException;
-import com.museum.exceptions.ExceptionResponse;
-import com.museum.utility.ValidationUtility;
+import com.museum.utility.ValidationUtils;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -24,7 +22,6 @@ import javax.validation.ConstraintViolationException;
 import javax.validation.ValidationException;
 import java.util.Map;
 import java.util.Optional;
-
 import static org.springframework.http.HttpStatus.*;
 
 @RestControllerAdvice
@@ -62,7 +59,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 
     @ExceptionHandler(AccessDeniedException.class) //403
     public final ResponseEntity<Object> handleAccessDeniedException(AccessDeniedException ex) {
-        ExceptionResponse exceptionResponse = new ExceptionResponse(HttpStatus.FORBIDDEN, "Access denied", ex);
+        ExceptionResponse exceptionResponse = new ExceptionResponse(FORBIDDEN, "Access denied", ex);
         return buildResponseEntity(exceptionResponse);
     }
 
@@ -114,7 +111,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     @ExceptionHandler(DataIntegrityViolationException.class)
     public final ResponseEntity<Object> handleDataIntegrityViolation(
             DataIntegrityViolationException ex) {
-        String rootMsg = ValidationUtility.getRootCause(ex).getMessage();
+        String rootMsg = ValidationUtils.getRootCause(ex).getMessage();
         if (rootMsg != null) {
             String lowerCaseMsg = rootMsg.toLowerCase();
             Optional<Map.Entry<String, String>> entry = CONSTRAINS_I18N_MAP.entrySet().stream()
@@ -142,7 +139,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<Object> handleErrorException(Exception ex) {
-        Throwable rootCause = ValidationUtility.getRootCause(ex);
+        Throwable rootCause = ValidationUtils.getRootCause(ex);
 
         if (rootCause instanceof ConstraintViolationException) {
             ExceptionResponse exceptionResponse = new ExceptionResponse(CONFLICT, "Validation error", ex.getCause());

@@ -1,8 +1,6 @@
 package com.museum.utility;
 
-public class ValidationUtility {
-    public ValidationUtility() {
-    }
+public class ValidationUtils {
     public static Throwable getRootCause(Throwable t) {
         Throwable result = t;
         Throwable cause;
