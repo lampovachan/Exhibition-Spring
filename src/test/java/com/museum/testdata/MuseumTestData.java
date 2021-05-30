@@ -8,7 +8,7 @@ import java.util.Map;
 import static com.museum.web.AbstractControllerTest.REST_URL;
 
 public class MuseumTestData {
-    public static final String MUSEUM_URL = REST_URL + "/museums/";
+    public static final String MUSEUM_URL = REST_URL + "museums/";
 
     public static final Museum MUSEUM_0 = new Museum(0L, "Geek Museum");
     public static final Museum MUSEUM_1 = new Museum(1L, "Kyiv Museum of Arts");

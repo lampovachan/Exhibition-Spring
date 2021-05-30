@@ -10,7 +10,7 @@ import java.util.Map;
 import static com.museum.web.AbstractControllerTest.REST_URL;
 
 public class UserTestData {
-    public static final String USERS_URL = REST_URL + "/users/";
+    public static final String USERS_URL = REST_URL + "users/";
 
     public static final Long START_SEQ = 0L;
     public static final Long USER_ID = START_SEQ;

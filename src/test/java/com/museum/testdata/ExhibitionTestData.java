@@ -11,7 +11,7 @@ import static com.museum.testdata.MuseumTestData.*;
 import static com.museum.web.AbstractControllerTest.REST_URL;
 
 public class ExhibitionTestData {
-    public static final String EXHIBITION_URL = REST_URL + "/exhibition/";
+    public static final String EXHIBITION_URL = REST_URL + "exhibition/";
 
     public static final Exhibition EXHIBITION_0 = new Exhibition(0L, "Illusion Exhibition", LocalDate.now(), 100, MUSEUM_0);
     public static final Exhibition EXHIBITION_1 = new Exhibition(1L, "Asian Culture", LocalDate.of(2021, 5, 31), 75, MUSEUM_0);
